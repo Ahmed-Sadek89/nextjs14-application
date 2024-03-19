@@ -13,7 +13,7 @@ const Page = () => {
         <h3 className='text-customBtnBg font-bold'>
           About Agency
         </h3>
-        <h1 className='text-3xl lg:text-6xl font-semibold text-customTextSoft'>
+        <h1 className='text-3xl lg:text-4xl xl:text-6xl font-semibold text-customTextSoft'>
           We create digital ideas that are bigger, bolder, braver and better.
         </h1>
         <p className='text-sm'>
@@ -22,7 +22,7 @@ const Page = () => {
           Special Team best consulting & finance solution provider. Wide range
           of web and software development services.
         </p>
-        <div className='flex flex-row gap-4 items-center justify-between flex-wrap'>
+        <div className='flex flex-row gap-10 md:gap-4 items-center justify-between flex-wrap'>
           <div >
             <h1 className='text-customBtnBg font-bold text-4xl'>10 K+</h1>
             <p>Year of experience</p>

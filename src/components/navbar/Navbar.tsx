@@ -17,7 +17,7 @@ const Navbar = () => {
             </section>
             {
                 open &&
-                <section className='flex md:hidden justify-end '>
+                <section className='flex md:hidden justify-end'>
                     <div className='bg-customDark h-screen z-50 fixed top-0 right-0 w-1/2'>
                         <ItemsIcon styles='mr-2 mt-5 items-end' setOpen={setOpen} />
                         <div className="h-screen m-auto flex justify-center items-center">

@@ -20,7 +20,7 @@ const Page = () => {
                     <button className='bg-customBtnBg rounded-md py-3 px-6'>Learn more.</button>
                     <button className='bg-customWhite text-black rounded-md py-3 px-6'>Contact</button>
                 </div>
-                <div className='relative w-[500px] h-[50px]'>
+                <div className='relative w-full md:w-[500px] h-[50px]'>
                     <Image src='/brands.png' alt='brands' fill className=' filter grayscale' />
                 </div>
             </section>
