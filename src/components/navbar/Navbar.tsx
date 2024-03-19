@@ -2,13 +2,14 @@
 import { useState } from 'react'
 import NavLinks from './NavLinks'
 import ItemsIcon from './ItemsIcon'
+import Link from 'next/link'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
     return (
         <header className='h-[6rem] pt-6'>
             <section className='flex flex-row justify-between items-center'>
-                <h3 className='text-2xl font-bold'>Sadek</h3>
+                <Link href={'/'} className='text-2xl font-bold'>Sadek</Link>
                 <ul className='hidden md:flex flex-row items-center gap-4 capitalize'>
                     <NavLinks />
                 </ul>
