@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
+export const metadata = {
+  title: "About",
+  description: "this is about page"
+}
+
 const Page = () => {
   return (
     <main className='flex flex-col-reverse lg:flex-row justify-between items-baseline lg:items-center gap-24 lg:gap-36 py-10'>
