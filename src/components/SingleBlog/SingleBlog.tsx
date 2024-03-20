@@ -3,21 +3,26 @@ import Link from 'next/link'
 import React from 'react'
 
 type props = {
-    blog: number
+    blog: {
+        id: number,
+        userId: number,
+        title: string,
+        body: string,
+    }
 }
 
 const SingleBlog = ({ blog }: props) => {
     return (
         <div className='mb-8 flex flex-row items-center w-full '>
             <div className="flex flex-col gap-4">
-                <div className='relative h-[70vh] w-full'>
+                <div className='relative h-[400px] w-full '>
                     <Image src={"https://images.pexels.com/photos/14589048/pexels-photo-14589048.jpeg"} alt='blog' fill className='objetc-cover' />
                 </div>
-                <h4 className='text-2xl font-bold'>Title</h4>
+                <h4 className='font-bold'>{blog.title}</h4>
                 <p className='text-sm font-[100] text-customTextSoft'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores, rem, blanditiis quasi dolorum soluta temporibus maxime magnam facere ut corporis numquam corrupti assumenda, itaque voluptatibus ratione iusto odio explicabo!
+                    {blog.body}                
                 </p>
-                <Link href={`blog/${blog}`} className='underline'>
+                <Link href={`blog/${blog.id}`} className='underline'>
                     READ MORE
                 </Link>
             </div>
