@@ -12,13 +12,13 @@ const SingleBlog = ({ post }: props) => {
         <div className='mb-8 flex flex-row items-center w-full '>
             <div className="flex flex-col gap-4">
                 <div className='relative h-[400px] w-full '>
-                    <Image src={post?.img || "/noavatar.png"} alt='blog' fill className='objetc-cover' />
+                    <Image sizes='100%' priority src={post?.img || "/noavatar.png"} alt='blog' fill className='objetc-cover' />
                 </div>
                 <h4 className='font-bold'>{post?.title}</h4>
                 <p className='text-sm font-[100] text-customTextSoft'>
                     {post?.desc}                
                 </p>
-                <Link href={`blog/${post?._id}`} className='underline'>
+                <Link href={`blog/${post?.slug}`} className='underline'>
                     READ MORE
                 </Link>
             </div>

@@ -1,29 +1,20 @@
-import { insertUser } from '@/libs/User/User.data';
 import React from 'react'
+import { getUserById } from '@/libs/User/User.data';
+import { user } from '@/types/user.types';
+import Image from 'next/image';
 
-type user = {
-    username: number
-}
-
-const getData = async (userId: number): Promise<user> => {
-    const res = await fetch(
-        `https://jsonplaceholder.typicode.com/users/${userId}`,
-        { cache: "no-store" }
-    );
-    if (!res.ok) {
-        throw new Error('this blog is not found')
-    };
-    return res.json()
-}
-
-const UserBlog = async ({userId}: {userId: number}) => {
-    const user = await getData(userId);
-    // const userID = await getUserById('65fe31c4fff2974e2769a439');
+const UserBlog = async ({ userId }: { userId: string }) => {
+    const user: user = await getUserById(userId);
     return (
-        <div>
-            <h4 className="text-customSoft font-bold">Author</h4>
-            <p className="text-sm">{user.username}</p>
-        </div>
+        <React.Fragment>
+            <div className="relative h-[50px] w-[50px]">
+                <Image priority sizes="100%" src={user.image || '/noavatar.png'} alt={user.username || ''} fill className=" rounded-full" />
+            </div>
+            <div>
+                <h4 className="text-customSoft font-bold">Author</h4>
+                <p className="text-sm capitalize">{user.username}</p>
+            </div>
+        </React.Fragment>
     )
 }
 

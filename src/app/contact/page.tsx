@@ -11,7 +11,7 @@ const Page = () => {
     <main className='flex flex-col lg:flex-row justify-around items-baseline lg:items-center py-10 lg:py-24 gap-10'>
       <section className='w-full lg:w-1/2 h-full'>
         <div className='relative w-full h-[50vh] lg:w-[500px] lg:h-[500px]'>
-          <Image src='/contact.png' alt='contact' fill className='object-contain' />
+          <Image sizes='100%' priority src='/contact.png' alt='contact' fill className='object-contain' />
         </div>
       </section>
       <section className='w-full lg:w-1/2'>

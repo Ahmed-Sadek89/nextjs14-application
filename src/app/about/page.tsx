@@ -40,7 +40,7 @@ const Page = () => {
       </section>
       <section className='w-full lg:w-1/2 h-full flex-1'>
         <div className='relative w-full h-[50vh] lg:w-[500px] lg:h-[500px]'>
-          <Image src='/about.png' alt='about' fill className='object-contain'/>
+          <Image sizes='100%' priority src='/about.png' alt='about' fill className='object-contain'/>
         </div>
       </section>
     </main>

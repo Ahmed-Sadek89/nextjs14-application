@@ -21,12 +21,12 @@ const Page = () => {
                     <button className='bg-customWhite text-black rounded-md py-3 px-6'>Contact</button>
                 </div>
                 <div className='relative w-full md:w-[500px] h-[50px]'>
-                    <Image src='/brands.png' alt='brands' fill className=' filter grayscale' />
+                    <Image sizes='100%' priority src='/brands.png' alt='brands' fill className=' filter grayscale' />
                 </div>
             </section>
             <section className='w-full lg:w-1/2 h-full'>
                 <div className='relative  h-screen'>
-                    <Image src='/hero.gif' alt='brands' fill />
+                    <Image sizes='100%' priority src='/hero.gif' alt='brands' fill />
                 </div>
             </section>
         </main>
