@@ -1,3 +1,4 @@
+import { insertUser } from '@/libs/User/User.data';
 import React from 'react'
 
 type user = {
@@ -16,7 +17,8 @@ const getData = async (userId: number): Promise<user> => {
 }
 
 const UserBlog = async ({userId}: {userId: number}) => {
-    const user = await getData(userId)
+    const user = await getData(userId);
+    // const userID = await getUserById('65fe31c4fff2974e2769a439');
     return (
         <div>
             <h4 className="text-customSoft font-bold">Author</h4>
